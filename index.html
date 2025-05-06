@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 词根词缀助手</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>AI 词根词缀助手</h1>
+    
+    <div class="api-key-section">
+        <h2>API 设置</h2>
+        <p>请输入您的 DeepSeek API Key:</p>
+        <input type="password" id="apiKeyInput" placeholder="输入您的 DeepSeek API Key">
+        <button id="saveApiKeyButton">保存 API Key</button>
+        <button id="clearApiKeyButton">清除 API Key</button>
+        <p id="apiKeyStatus">请先输入并保存您的 DeepSeek API Key。</p>
+    </div>
+
+    <div class="search-section">
+        <h2>单词查询</h2>
+        <input type="text" id="wordInput" placeholder="输入要查询的英文单词">
+        <button id="searchButton">查询</button>
+        <div id="statusMessage" class="status-message"></div>
+    </div>
+
+    <div class="result-section" id="resultSection" style="display: none;">
+        <h2>查询结果</h2>
+        <div id="mainWordResult" class="word-card">
+            <h3 id="wordTitle"></h3>
+            <p>音标: <span id="wordIpa" class="ipa"></span></p>
+            
+            <h4>词根词缀分析</h4>
+            <div id="etymologyAnalysis"></div>
+            
+            <h4>常用短语</h4>
+            <ul id="wordPhrases"></ul>
+            
+            <h4>例句</h4>
+            <div id="wordExamples"></div>
+        </div>
+
+        <h3>相关词汇</h3>
+        <div id="relatedWords"></div>
+    </div>
+
+    <div class="disclaimer">
+        <p><small>免责声明: 本工具使用 AI 生成结果，可能存在不准确之处，仅供学习参考。您的 API Key 仅存储在本地浏览器中。</small></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
